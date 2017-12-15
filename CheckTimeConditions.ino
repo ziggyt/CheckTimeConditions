@@ -8,35 +8,26 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 DS3231  rtc(SDA, SCL);
 Time current;
+Encoder myEnc(5, 6);
 
 int encodeButton = 7;
 int relayPin = 10;
 int notActivePin = 11;
 int resetSwitch = 12;
-
 int startHour;
 int stopHour;
-
-
-
 int encoderInput;
 int counter;
-
 int startTime;
 int stopTime;
 int tmpHour;
-
 int button;
 int resetButton;
-
 final int startMin = 0;
 final int stopTime = 5;
 
 boolean startTimeSet = false;
 boolean stopTimeSet = false;
-
-
-Encoder myEnc(5, 6);
 
 
 void setup() {
